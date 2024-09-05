@@ -127,9 +127,12 @@ function openAssistant(){
     const trimmedMessage = message.trim().toLowerCase();
     let response = "";
 
-    switch(true) {
+    switch(true) { 
         case /hello/i.test(trimmedMessage):
             response = "Hello! How can I assist you today?";
+            break;
+        case /i am fine/i.test(trimmedMessage):
+            response="good to know!! what can i do for you";
             break;
         case /how are you\??/i.test(trimmedMessage):
             response = "I am just a bot, but thanks for asking!";
