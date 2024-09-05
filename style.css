@@ -22,6 +22,7 @@
 }
 
 .navbar {
+    font-family: 'Times New Roman', Times, serif;
     width: 90%;
     margin: auto;
     padding: 55px;
@@ -101,8 +102,40 @@
     width: 100%;
     opacity: 0;
     animation: fade 8s infinite;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  /* Funky 3D Font */
+    
+}
+body {
+    background-color: #282c34; /* Dark background for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
+.text {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #FF9933, white, #138808);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for interactions */
+}
+
+.text:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #FFD700; /* Change text color on hover for effect */
+}
+
+.text:active {
+    transform: scale(0.9); /* Slightly shrink on click for feedback */
+}
 .text:nth-child(2) {
     animation-delay: 4s;
 }
@@ -129,6 +162,7 @@
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 button {
