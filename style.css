@@ -21,63 +21,76 @@
     z-index: -1; /* Make sure the video stays behind the content */
 }
 
-.navbar {
-    font-family: 'Times New Roman', Times, serif;
-    width: 90%;
-    margin: auto;
-    padding: 55px;
-    padding-left: 17%;
-    display: flex;
-    align-items:start;
-    justify-content: space-between;
-    position: relative; /* Ensure relative positioning */
-    z-index: 1; /* Ensure it appears above the video */
-}
+
 
 .logo {
     position: absolute;
-    top: 0; /* Align with the top of the container */
-    left: 0; /* Align with the left side of the container */
+    top: -5%; /* Align with the top of the container */
+    left: 3%; /* Align with the left side of the container */
     width: 80px;
     cursor: pointer;
     padding-bottom: 80%; /* Aspect ratio padding */
 }
 
 /* fnds */
-.navbar ul {
-    display:flex;
-    list-style: none;
+body {
+    background-color: #f0f0f0; /* Light background for better visibility */
+}
+
+.navbar {
+    list-style-type: none;
     margin: 0;
-    padding: 0;
+    display:flex;
+    justify-content: space-around;
+    background-color:#e1f5fe;
+    padding: 12px;
+    padding-left: 10%;
 }
 
-.navbar ul li {
-    margin: 0 10px;
-    position: relative;
+.navbar li {
+    display: inline;
 }
 
-.navbar ul li a {
+.navbar a {
+    font-family: 'Cinzel', serif; /* Using a decorative font */
+    font-size: 15px;
+    margin-left: 25px;
     text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    padding: 10px;
+    color:#000080;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, 
+                                      #ff9933, /* Saffron color for the left side */
+                                      white,   /* White in the middle */
+                                      #138808  /* Green color for the right side */
+                                      );
+    background-size: 100% 100%; /* Makes sure the gradient covers the entire padding area */
+    background-clip: padding-box; /* Ensures the gradient is applied only to the padding area */
 }
 
-.navbar ul li::after {
-    content: "";
-    height: 3px;
-    width: 0;
-    background: #009688;
+.navbar a:hover {
+    color: #ffcc00; /* Glowing golden effect on hover */
+    text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+    border-bottom: 2px solid #ffcc00; /* Add underline effect on hover */
+}
+
+.navbar a:before {
+    content: '';
     position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-.navbar ul li:hover::after {
+.navbar a:hover:before {
     width: 100%;
+    left: 0;
 }
-
 .content {
     width: 100%;
     position: absolute;
